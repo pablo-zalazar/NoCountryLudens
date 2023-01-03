@@ -1,0 +1,47 @@
+.gamesContainer
+    width: 100%
+    height: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 20px 0
+    height: 420px
+    overflow-y: scroll
+    scroll-behavior: smooth
+    .card
+        width: 311px
+        height: 129px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        border-radius: 20px
+        background: linear-gradient(255.54deg, #F2CF8D 31.32%, #D3A856 91.81%)
+        .cardImageContainer
+            width: 100%
+            height: inherit
+            border-radius: 0 20px 20px 0
+            position: relative
+            .cardImage
+                width: 100%
+                height: inherit
+                border-radius: 20px
+                object-fit: cover
+            .cardTitle
+                background: rgba(0, 0, 0, 0.4)
+                position: absolute
+                bottom: 0
+                left: 0px
+                font-size: 14px
+                width: 100%
+                font-weight: 700
+                text-align: center
+                border-bottom-right-radius: 20px
+                border-bottom-left-radius: 20px
+        .actionCard
+            display: grid
+            height: 100%
+            place-content: center
+            font-weight: 700
+            color: #000
+            font-size: 20px
+    &::-webkit-scrollbar
+        appearance: none

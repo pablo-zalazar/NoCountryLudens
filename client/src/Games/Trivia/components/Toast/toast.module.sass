@@ -1,0 +1,27 @@
+.container
+    width: auto
+    height: 45px
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    max-width: max-content
+    border-radius: 10px
+    animation: toast 0.5s, fadeout 0.5s 2.5s
+    z-index: 10
+    bottom: 20px
+    right: 0px
+    left: 0px
+    margin: 0px auto
+    .content
+        color: #ffff
+        padding: 0 4px
+
+@keyframes toast
+    from
+        bottom: 0
+        opacity: 1
+
+    to
+        bottom: 20px
+        opacity: 1

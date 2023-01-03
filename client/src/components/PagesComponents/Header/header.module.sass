@@ -1,0 +1,118 @@
+@use "../../../styles/variables" as *
+@use "../../../styles/stylecomponents" as *
+    
+.header_content
+    width: 100%
+    height: 70px
+    text-align: center
+    background: $dark-gray
+    border-radius: 0px 0px 20px 20px 
+    padding: 10px
+    display: flex
+    justify-content: space-around
+    @include mq (medium)
+        width: 80vw
+        height: 109px
+        margin: 0 auto
+        justify-content: space-between
+    @media screen and (min-width:1600px)
+        width: 70vw
+    @media screen and (min-width:1900px)
+        width: 60vw
+    .logoH 
+        display: none
+        @include mq (medium)
+            display: inline
+            height: 50px
+            margin: auto 20px
+    .logoHM
+        margin: auto
+        height: 40px
+        @include mq (medium)
+            display: none
+    .spacer
+        width: 120px
+        @include mq (medium)
+            display: none
+    input
+        @include inputBlackRounded(#000 url('../../../../assets/Icons/search.svg') no-repeat 140px)
+        height: 40px
+        width: 180px
+        margin: auto
+        font-weight: 600
+        font-size: 14px
+        @include mq (medium)
+            @include inputBlackRounded(#000 url('../../../../assets/Icons/search.svg') no-repeat 210px)
+            width: 250px
+        @include mq (large)
+            @include inputBlackRounded(#000 url('../../../../assets/Icons/search.svg') no-repeat 360px)
+            width: 400px
+    .inputD
+        display: none
+        @include mq (medium)
+            display: inline        
+    .inputM
+        display: inline
+        @include mq (medium)
+            display: none        
+    .login1
+        display: none
+        @include mq (medium)            
+            display: inline            
+            margin: auto 20px
+            @include buttonTransparent()         
+    .mob
+        height: 25px
+        width: 25px
+        margin: auto 15px
+        cursor: pointer
+        @include mq (medium)
+            display: none
+        img
+            height: 25px
+            width: 25px
+            margin: auto 
+    .title
+        margin: auto
+
+.user_container
+    position: relative
+    margin: auto 10px
+    @include mq (medium) 
+        margin: auto 20px
+    .user
+        height: 30px
+        display: flex
+        line-height: 30px
+        cursor: pointer
+        @include mq (medium)
+            height: 50px
+            line-height: 50px
+        i
+            margin-right: 5px
+        .arrow
+            height: 10px
+            margin: auto 5px
+    .menu
+        width: 200px
+        height: auto
+        position: absolute
+        top: 45px
+        right: 0
+        z-index: 10
+        background: $dark-gray
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 0px 0px 20px 20px
+        padding: 0
+        li
+            list-style: none
+        a
+            text-decoration: none
+        p
+            color: #fff
+            margin: 20px auto
+            cursor: pointer
+            font-size: 16px
+            padding: 0
+        @include mq (medium)
+            top: 60px

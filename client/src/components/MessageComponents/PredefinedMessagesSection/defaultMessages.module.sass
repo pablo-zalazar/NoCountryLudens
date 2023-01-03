@@ -1,0 +1,101 @@
+@use "../../../styles/variables.sass" as *
+@use "../../../styles/stylecomponents.sass" as *
+
+.container
+    height: 100%
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    background: $messages-Background
+    @include mq(medium)
+        width: 350px
+        height: 820px
+        border-left: 1px solid #fff
+    .message
+        @include mq(medium)
+        overflow-y: scroll
+        scroll-behavior: smooth
+        &::-webkit-scrollbar
+            &:vertical
+                width: 0px
+        &::-webkit-scrollbar
+            appearance: none
+        .greeting
+            display: flex
+            flex-direction: column
+            width: 100%
+            justify-content: center
+            align-items: center
+            margin: 8px 0
+            aside
+                background: transparent
+                border: none
+                border-width: 0px !important
+                z-index: 0
+                font-family: $main-font !important
+                div
+                    &:nth-child(1)
+                        display: flex
+                        div
+                            &:nth-child(2)
+                                button
+                                    filter: brightness(1.5)
+                    &:nth-child(2)
+                        &::-webkit-scrollbar
+                            -webkit-appearance: none
+                    ul
+                        li
+                            div
+                                &:nth-child(1)
+                                    border-radius: 20px
+                                    font-family: $main-font
+
+            input
+                border-radius: 20px
+                background: #000
+                border: 0px
+                outline: none
+                &:focus,
+                &:active
+                    border: 0px
+            .title
+                font-size: 16px
+                font-weight: 700
+                width: 100%
+            .greetingButton
+                width: max-content
+                padding: 0 15px
+                border-radius: 20px
+                background: $green1
+                display: flex
+                align-items: center
+                height: 40px
+                cursor: pointer
+                margin: 8px 0
+                &:hover
+                    background: $green2
+            .dailygButton
+                width: max-content
+                padding: 0 15px
+                border-radius: 20px
+                background: $blue6
+                display: flex
+                align-items: center
+                height: 40px
+                cursor: pointer
+                margin: 8px 0
+                &:hover
+                    background: $blue7
+            .challengeButton
+                width: max-content
+                display: flex
+                align-items: center
+                height: 40px
+                padding: 0 15px
+                border-radius: 20px
+                @include lightYellowGradient()
+                cursor: pointer
+                margin: 8px 0
+                &:hover
+                    @include darkYellowGradient()

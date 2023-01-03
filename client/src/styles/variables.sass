@@ -1,0 +1,35 @@
+
+// VARIABLES
+$accent-color: #F2CF8D
+$blue5: #1F2440
+$blue4: #292759
+$blue3: #464AA6
+$blue2: #3B3F8C
+$blue6: #2088E9
+$blue7: #0559A6
+$green1: #329B00
+$green2: #297704
+$messages-Background: #262553
+$messages-hover: rgba(255, 255, 255, 0.1)
+$light-gray: #7A7A7A
+$dark-gray: #323232
+$main-font: "Monsterrat", sans-serif
+$secondary-font: "Inter", sans-serif
+
+// MEDIA QUERIES
+// Exemple: 
+// @include mq(small)
+//     height: 100vh
+
+/* Breakpoints */
+
+$breakpoints: ("small": 390px, "medium": 768px, "large": 992px,"xlarge": 1440px)
+
+/* Break Points */
+
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints)
+  @if map-has-key($mq-breakpoints, $mq-breakpoint)
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint)
+
+  @media screen and (min-width: #{$mq-breakpoint})
+    @content

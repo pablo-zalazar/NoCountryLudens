@@ -1,0 +1,30 @@
+@use "../../styles/variables" as *
+@use "../../styles/stylecomponents" as *
+
+.container
+    min-height: 100vh
+    margin: auto
+    display: flex
+    align-items: center
+    @include backgroundGradient()
+    min-height: 100vh
+
+.notFound    
+    margin: auto
+    text-align: center
+    color: #fff
+    img
+        height: 220px
+        margin-left: 30px
+    h1
+        font-size: 64px
+        font-weight: 600
+        margin: 20px auto
+    h3
+        font-size: 24px
+        font-weight: 600
+        margin: 10px auto
+    h4
+        font-size: 16px
+        font-weight: 600
+        margin: 10px auto

@@ -1,0 +1,78 @@
+@use "../../../styles/variables" as *
+    
+.nav_content
+    display: flex
+    justify-content: space-around
+    position: sticky
+    background-color: $dark-gray
+    bottom: 0
+    left: 0
+    right: 0
+    height: 60px
+    @include mq (medium)
+        background-color: #000
+        display: inline
+        position: static
+        width: 113px
+        height: 100%
+        text-align: right    
+
+.nav
+    @include mq (medium)
+        padding-top: 70px
+
+.logo
+    display: none
+    @include mq (medium)
+        display: flex
+        height: 65px
+        width: 65px
+        margin: 20px auto
+
+.img    
+    width: 34px
+    margin: 11px
+    @include mq (medium) 
+        width: 113px 
+        margin: 0
+
+.games    
+    content: url('../../../../assets/Icons/gameM.svg')
+    @include mq (medium)
+        content: url('../../../../assets/Icons/games.svg')
+
+.gamesAc    
+    content: url('../../../../assets/Icons/gameMAc.svg')
+    @include mq (medium)
+        content: url('../../../../assets/Icons/gamesAc.svg')
+
+.favs 
+    content: url('../../../../assets/Icons/favM.svg')
+    @include mq (medium)
+        content: url('../../../../assets/Icons/fav.svg')
+
+.favsAc    
+    content: url('../../../../assets/Icons/favMAc.svg')
+    @include mq (medium)
+        content: url('../../../../assets/Icons/favAc.svg')
+
+.notif    
+    content: url('../../../../assets/Icons/notificationM.svg')
+    @include mq (medium)
+        content: url('../../../../assets/Icons/notifications.svg')
+
+.notifAc    
+    content: url('../../../../assets/Icons/notificationMAc.svg')
+    @include mq (medium)
+        content: url('../../../../assets/Icons/notificationsAc.svg')
+
+.messages    
+    content: url('../../../../assets/Icons/messagesM.svg')
+    @include mq (medium)
+        content: url('../../../../assets/Icons/messages.svg')
+
+.messagesAc    
+    content: url('../../../../assets/Icons/messagesMAc.svg')
+    @include mq (medium)
+        content: url('../../../../assets/Icons/messagesAc.svg')
+    

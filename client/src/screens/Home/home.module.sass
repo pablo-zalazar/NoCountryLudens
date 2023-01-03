@@ -1,0 +1,62 @@
+@use "../../styles/variables.sass" as *
+    
+.home
+    width: 90vw
+    margin: 0 auto
+    padding-top: 20px
+    @include mq (medium)
+        width: 80vw
+    @media screen and (min-width:1600px)
+        width: 70vw
+    @media screen and (min-width:1900px)
+        width: 60vw
+    img
+        height: 35px
+        margin-left: 8px
+    h2
+        font-size: 20px
+        line-height: 35px
+    
+.cards
+    margin: 20px 0
+    position: relative
+
+.cards_small
+    display: grid
+    grid-template-columns: 1fr 1fr
+    @include mq(medium)
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        // height: 160px
+        // overflow: hidden
+    // @include mq(large)
+    //     height: 220px
+
+.cards_search
+    display: flex
+    overflow: hidden
+    @include mq(medium)
+        padding: 5px 25px
+    .desc
+        text-align: left
+        margin: auto 20px
+
+.spinner 
+  max-height: calc(100vh - 269px)  
+
+.d_flex
+    display: flex
+    justify-content: center
+
+.d_flex2
+    display: flex
+    img
+        height: 20px
+        margin-right: 15px
+        cursor: pointer
+    h2
+        line-height: 20px
+
+.prox
+    margin-top: 25px

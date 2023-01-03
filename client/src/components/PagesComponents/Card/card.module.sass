@@ -1,0 +1,123 @@
+@use "../../../styles/variables" as *
+    
+.card
+    position: relative
+    width: 160px
+    height: 210px
+    border-radius: 20px  
+    margin: 0 auto 5px  
+    overflow: hidden
+    @include mq (medium)
+        width: 210px
+        height: 285px
+    @include mq (large)
+        width: 260px
+        height: 360px
+    h5
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        background-color: #00000080
+        height: 35px
+        width: 160px
+        line-height: 35px
+        font-size: 12px
+        @include mq (medium)
+            width: 210px
+            font-size: 16px
+        @include mq (large)
+            font-size: 18px
+            width: 260px
+    img
+        cursor: pointer
+        margin: 0
+        height: 100%
+        width: 100%
+        object-fit: cover
+        // width: 160px
+        // height: 210px
+        // @include mq (medium)
+        //     width: 210px
+        //     height: 285px
+        // @include mq (large)
+        //     width: 260px
+        //     height: 360px  
+    
+.is_hover
+    display: none
+    @include mq (medium)
+        display: block
+        position: absolute
+        top: 0
+        border-radius: 20px 
+        background-color: #00000030
+        cursor: pointer
+        // width: 210px
+        // height: 285px
+        width: inherit
+        height: inherit
+        img
+            width: 80px
+            height: 270px
+            object-fit: contain
+
+.display_mob
+    @include mq (large)
+        width: 260px
+        height: 360px
+        padding: 10px
+
+.display_mob
+    @include mq (medium)
+        display: none
+
+.card_small
+    height: 115px
+    width: 150px
+    margin: 20px auto 0    
+    @include mq (medium)
+        width: 210px
+        height: 140px
+        margin: 20px auto 2px
+    @include mq (large)
+        height: 180px
+        width: 260px
+        margin: 30px auto 2px
+    img
+        height: 100%
+        width: 100%
+        object-fit: cover
+        // height: 135px
+        // width: 150px
+        // @include mq (medium)
+        //     width: 210px
+        //     height: 150px
+        // @include mq (large)
+        //     height: 180px
+        //     width: 260px
+    .is_hover
+        display: none
+        @include mq (medium)
+            display: block
+            position: absolute
+            top: 0
+            border-radius: 20px 
+            background-color: #00000030
+            cursor: pointer
+            width: inherit
+            height: inherit
+            img
+                width: 80px
+                height: 100px   
+                object-fit: contain
+
+.show_stars
+    display: none
+    @include mq(medium)
+        display: inline
+        text-align: left
+
+.imgComing
+    &:hover
+        cursor: default

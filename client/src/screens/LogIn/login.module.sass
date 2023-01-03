@@ -1,0 +1,145 @@
+@use "../../styles/variables.sass" as *
+@use "../../styles/stylecomponents.sass" as *
+    
+.container
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100vh
+    background: linear-gradient(180deg, #0C0E18 0%, #292759 100%)
+    
+.formu
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100vh
+    @include mq(large)
+        width: 400px
+        height: 600px
+        background: #00000050
+        border-radius: 0 20px 20px 0
+
+.description
+    color: #fff
+    font-size: 14px
+    margin-top: 20px
+
+.arrow
+    position: absolute
+    top: 5%
+    left: 10%
+    fontSize: 25px
+    cursor: pointer
+
+.form
+    display: flex
+    flex-direction: column
+    width: 80%
+    
+.formfield
+    margin-top: 10px
+    padding: 10px 20px
+    border: 2px solid #111 
+    background: #fff
+    color: #111
+    border-radius: 20px
+    font-size: 14px
+    width: 100%
+    position: relative
+
+.formfieldcontraseña
+    margin-top: 10px
+    padding: 10px 20px
+    border: 2px solid #111 
+    background: #fff
+    color: #111
+    border-radius: 20px
+    font-size: 14px
+    width: 100%
+    position: relative
+
+.containercontraseña
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    
+.formfield:active
+    border: 3px solid #111 
+    box-shadow: none
+
+.formfield:focus
+    border: 3px solid #111 
+    box-shadow: none
+
+.formerrors
+    color: red
+    font-size: 13px
+    margin-top: 7px
+    text-align: center
+
+.formbutton
+    @include buttonTransparent()
+    height: 40px
+    cursor: pointer
+    width: 100%
+    margin-top: 10px
+    @include mq(medium)
+        width: 60%
+        margin: 10px auto
+    @include mq(large)
+        width: 90%
+
+.crearcuenta
+    color: #fff
+    margin-top: 15px
+
+.volver-home
+    color: #fff
+    position: absolute
+    top: 5%
+    left: 10%
+    font-size: 25px
+    cursor: pointer
+
+.imagen 
+    width: 100px
+    @include mq(medium)
+        width: 130px
+
+.img_desk 
+    display: none
+    @include mq(large)
+        display: inline
+        width: 400px
+        background: #00000050
+        border-radius: 20px 0 0 20px
+
+@include mq(medium)
+    .containercontraseña, .formfield, .formerrors
+        width: 60%
+        margin: auto
+
+@include mq(large)
+    .containercontraseña, .formfield, .formerrors
+        width: 90%
+
+// @media screen and (min-width: 800px) 
+//     
+//         
+//         align-items: center
+//     .imagen
+//         width: 140px
+//    
+
+// @media screen and (min-width: 1055px) 
+//     .containercontraseña, .formfield, .formbutton
+//         width: 50%
+
+// @media screen and (min-width: 1400px) 
+//     .containercontraseña, .formfield, .formbutton
+//         width: 40%

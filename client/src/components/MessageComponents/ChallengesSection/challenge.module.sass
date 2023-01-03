@@ -1,0 +1,26 @@
+@use "../../../styles/variables.sass" as *
+@use "../../../styles/stylecomponents.sass" as *
+.container
+    height: 100vh
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    background: $messages-Background
+    @include mq(medium)
+        width: 350px
+        height: 820px
+        overflow-y: scroll
+        scroll-behavior: smooth
+        border-left: 1px solid #fff
+        &::-webkit-scrollbar
+            &:vertical
+                width: 0px
+        &::-webkit-scrollbar
+            appearance: none
+    .header
+        height: 76px !important
+    .title
+        font-weight: 500
+        font-size: 16px
+        margin: 16px 0px

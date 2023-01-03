@@ -1,0 +1,131 @@
+@use "../../../../styles/variables" as *
+@use "../../../../styles/stylecomponents" as *
+
+
+.errors
+  padding-left: 0.5em  
+
+.section_title
+  font-size: 14px
+
+.group_form
+  padding: 1em 0
+  display: flex
+  align-items: center
+
+.container
+  font-family: $main-font
+  display: flex
+  flex-grow: 1
+  justify-content: center
+  align-items: center
+  input[type="radio"]
+    margin-right: 1em
+    @include checkandradiobuttons()
+
+  input[type="checkbox"]
+    margin-right: 1em
+    @include checkandradiobuttons()
+
+  p 
+    font-size: 12px
+    padding: 1em 0
+
+
+.form
+  background: $dark-gray
+  border-radius: 20px
+  padding: 30px
+  font-size: 14px
+  text-align: left
+
+  &_wrapper
+    display: flex
+    flex-flow: row nowrap
+    gap: 60px
+  
+
+
+  &_name
+    grid-area: "NameArea"
+    .group_form
+      display: flex
+      flex-flow: column nowrap
+      justify-content: left
+    input
+      @include inputBlackRounded()
+      width: 378px
+      font-size: 16px
+
+
+  &_checkbox, &_radio 
+    label 
+      display: flex
+      align-items: center
+    img
+      margin-right: 1em
+
+  &_images 
+    label
+      width: 196px
+      height: 196px
+      border-radius: 20px
+      background: black
+      display: flex
+      justify-content: center
+      align-items: center
+      cursor: pointer
+
+    img
+      height: 100%
+      width: 100%
+      border-radius: 20px
+      object-fit: cover
+      object-position: center
+      
+    img.default 
+      width: 106px
+      height: 78.5px
+
+  &_description
+    width: 100%
+    textarea
+      width: 100%
+      resize: none
+      height: 150px
+      @include inputBlackRounded()
+  
+  &_folder
+    max-height: 0
+    overflow: hidden
+    transition: max-height 500ms ease-in-out
+    .group_form
+      display: flex
+      flex-flow: column nowrap
+      justify-content: left
+      align-items: flex-start
+    &.open 
+      max-height: 1000px 
+      transition: max-height 1s ease-in-out
+    input
+      @include inputBlackRounded()
+      width: 378px
+      font-size: 16px
+  
+  &_footer
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    padding: 1em
+
+    button
+      min-width: 132px
+      height: 40px
+      border-radius: 20px
+      background: transparent
+      &.cancel
+        border: 1px solid #FFFFFF
+        color: #FFFFFF
+      &.submit
+        border: 1px solid #F2CF8D
+        color: #F2CF8D

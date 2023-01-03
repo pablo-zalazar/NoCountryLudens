@@ -1,0 +1,104 @@
+@use "../../styles/variables.sass" as *
+@use "../../styles/stylecomponents.sass" as *
+
+.games_content
+    justify-content: center
+    text-align: center
+    width: 90%
+    margin: 0 auto
+    @include mq(large)
+        width: 820px
+    @include mq(xlarge)
+        width: 1230px
+        background: #00000050
+        padding: 20px
+        margin-top: 25px
+        border-radius: 20px
+        max-height: 750px
+
+.screen_games
+    height: 72vh
+    border: 5px solid white
+    border-radius: 30px
+    margin: 10px auto
+    background-color: #D9D9D9
+    overflow: hidden
+    @include mq (medium)
+        height: 85vh
+        max-height: 600px
+    @include mq (large)
+        width: 820px
+
+.circle
+    width: 34px
+    height: 34px
+    @include darkYellowGradient()
+    border-radius: 28px
+    margin: 10px
+    text-align: center
+    line-height: 34px
+    font-size: 20px
+
+.text_start
+    margin: 10px
+    text-align: start
+    @include mq(xlarge)
+        width: 340px
+
+.d_flex
+    justify-content: left
+    img
+        margin: 10px 5px
+
+// .ranking
+//     display: flex
+//     flex-wrap: wrap
+//     color: #000
+//     padding: 11px 0px
+//     margin: 0 auto
+//     height: 211px  
+//     @include lightYellowGradient()
+//     border-radius: 20px
+//     @include mq(xlarge)
+//         width: 340px
+//     h4, p
+//         width: 50%
+//         font-weight: bold
+
+.ranking
+    display: flex
+    flex-direction: column
+    color: #000
+    padding: 1em
+ 
+    @include lightYellowGradient()
+    border-radius: 20px
+    @include mq(xlarge)
+        width: 340px
+    div
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+    .noranking
+        padding: 1em
+
+.qualify
+    display: flex
+    justify-content: left
+    justify-content: center
+    h4
+        margin-right: 20px
+
+.desktop
+    @include mq(xlarge)
+        width: 1200px
+        display: flex
+
+.name
+    display: flex
+    justify-content: center
+    line-height: 30px
+    margin: 15px
+    h2
+        margin-right: 20px
+        font-size: 20px

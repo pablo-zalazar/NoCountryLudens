@@ -1,0 +1,38 @@
+@use "../../../styles/variables.sass" as *
+@use "../../../styles/stylecomponents" as *
+
+.container
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 20px
+    font-weight: 700
+    width: 100vw
+    height: 55px
+    border-radius: 0px 0px 20px 20px
+    @include lightYellowGradient()
+    color: #ffff
+    position: relative
+    @include mq(medium)
+        border-radius: 0px
+        display: flex
+        height: 126px
+        width: 100%
+    .arrow
+        height: 24px
+        width: 24px
+        position: absolute
+        display: none
+        left: 20px
+        z-index: 5
+        cursor: pointer
+        @include mq(medium)
+            display: block
+    .title
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        left: 0
+        right: 0
+        margin: auto

@@ -1,0 +1,24 @@
+%containerOfSusscesAndFailures
+    display: flex
+    align-items: center
+    width: 40px
+    justify-content: space-between
+    color: #ffff
+    font-weight: 500
+    font-size: 14px
+    margin-top: 10px
+
+.container
+    display: flex
+    width: 100%
+    .successContainer
+        @extend %containerOfSusscesAndFailures
+        img
+            width: 24px
+            margin: 0
+
+    .failuresContainer
+        @extend %containerOfSusscesAndFailures
+        img
+            width: 24px
+            margin: 0

@@ -1,0 +1,27 @@
+@use "../../styles/variables" as *
+@use "../../styles/stylecomponents" as *
+    
+.messages_content
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-grow: 1
+    background: #262553
+    @include mq(medium)
+        background: transparent
+        padding: 20px
+
+.not_logged
+    margin: auto
+    img
+        height: 160px
+        margin-bottom: 20px
+        @include mq(large)
+            height: 200px
+    h3
+        font-size: 18px
+        font-weight: 600
+        margin-bottom: 30px
+    button
+        @include buttonTransparent()
+        width: 270px

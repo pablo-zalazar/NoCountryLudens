@@ -1,0 +1,35 @@
+@use '../../../styles/variables.sass' as *
+@use '../../../styles/stylecomponents' as *
+
+.container
+    height: 100vh
+    width: 100%
+    position: relative
+    background: $messages-Background
+    @include mq(medium)
+        width: 350px
+        height: 820px
+    .selectMessage
+        width: 80%
+        height: 40px
+        border-radius: 20px
+        font-weight: 500
+        font-size: 16px
+        background: transparent
+        border: 1px solid $accent-color
+        position: absolute
+        bottom: 20px
+        left: 0
+        right: 0
+        margin: 0 auto
+        color: $accent-color
+        &:hover
+            color: #000
+            @include lightYellowGradient()
+    .messageContainer
+        width: 100%
+        height: 90%
+        display: grid
+        img
+            justify-self: center
+            align-self: center

@@ -1,0 +1,108 @@
+@use "../../../../styles/variables" as *
+
+
+.row_table    
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    font-family: $main-font
+    font-size:14px 
+    background: $dark-gray
+    border-radius: 20px
+    width: 100%
+    margin: 1em auto
+    
+      
+    @include mq(medium)
+        display: table-row
+        text-align: center
+        height: 75.25px
+        border-radius: 0
+    
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+           
+
+    div
+        display: block
+        vertical-align: middle
+        padding: 1em
+        width: 100%
+        justify-content: center
+
+        @include mq(medium)
+            display: table-cell
+            padding: 2em
+            border-bottom: 1px solid #fff
+            white-space: nowrap
+    .cover
+        width: 80vw
+        height: 80vw
+        @include mq(small)
+            width: 20vw
+            height: 20vw
+        @include mq(medium)
+            width: auto
+            height: auto
+
+        img
+            border-radius: 20px
+            @include mq(medium)
+                width: 36px
+                height: 36px
+                object-fit: cover
+                border-radius: 0     
+
+    button, a
+        background: transparent
+        border: none
+        height: 40px
+        width:40px
+        text-decoration: none
+
+    a img
+        max-height: 36px
+        max-width: 36px
+        object-fit: contain
+
+    .description 
+        display: block
+        @include mq(medium)
+            display: none
+        @include mq(xlarge)
+            white-space: nowrap
+            text-overflow: ellipsis
+            overflow: hidden
+            max-width: 200px
+            display: table-cell
+
+    .devices
+        display: flex
+        gap: 1em
+        @include mq(medium)
+            display: none
+        @include mq(large)
+            display: table-cell
+        
+        img    
+            max-height: 36px
+            max-width: 36px
+    .buttonsOptions
+        display: flex
+        gap: 1em
+        justify-content: end
+
+    .name 
+        @include mq(small)
+        display: flex
+        vertical-align: middle
+        padding: 1em
+        width: calc(100% - 20vw)
+        align-items: center
+        justify-content: center
+        align-items: center
+        @include mq(medium)
+            display: table-cell

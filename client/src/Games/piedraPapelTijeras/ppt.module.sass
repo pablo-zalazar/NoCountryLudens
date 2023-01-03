@@ -1,0 +1,81 @@
+.app
+    text-align: center
+    color: #000
+    height: 100%
+    padding: 15px 0
+    h1
+        font-size: 18px
+
+.img
+    width: 70px
+    margin: 10px
+    @media screen and (min-width:800px)
+        width: 100px
+        margin: 20px
+
+.img_options
+    cursor: pointer
+
+.d_none
+    display: none
+
+.d_flex
+    display: flex
+    justify-content: center    
+
+.txt
+    margin: auto 20px
+
+.img_selected
+    animation: fadein 4s
+
+@keyframes fadein
+    0%
+        opacity: 0 
+    100%
+        opacity: 1 
+
+.btn
+    height: 50px
+    width: 35%px
+    margin: 0 10px
+    padding: 10px
+    background-color: cornflowerblue
+    color: aliceblue
+    font-size: 15px
+    border-radius: 10px
+    border: none
+    cursor: pointer
+    @media screen and (min-width:800px)
+        height: 50px
+        width: 200px
+        font-size: 20px
+        font-weight: 700
+
+.bold
+    font-size: 25px
+
+.box 
+    width: auto
+    margin: 50px 20px
+    background: #00bfb6
+    padding: 15px
+    text-align: center
+    font-weight: 700
+    color: #fff
+    font-family: arial
+    position: relative
+    border-radius: 10px
+
+.sb2:before
+    content: ""
+    width: 0px
+    height: 0px
+    position: absolute
+    border-left: 10px solid transparent
+    border-right: 10px solid #00bfb6
+    border-top: 10px solid #00bfb6
+    border-bottom: 10px solid transparent
+    left: -19px
+    top: 16px
+
